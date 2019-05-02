@@ -205,7 +205,6 @@ def parse_properties(node):
             cls = None
             try:
                 if "type" in subnode.keys():
-                    module = importlib.import_module('builtins')
                     cls = prop_type[subnode.get("type")]
             except AttributeError:
                 logger.info("Type [} Not a built-in type. Defaulting to string-cast.")
